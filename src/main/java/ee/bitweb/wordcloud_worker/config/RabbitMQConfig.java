@@ -9,17 +9,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
 
-    @Bean
-    public JacksonJsonMessageConverter messageConverter() {
-        return new JacksonJsonMessageConverter();
-    }
+        @Bean
+        public JacksonJsonMessageConverter messageConverter() {
+            return new JacksonJsonMessageConverter();
+        }
 
-    @Bean
-    public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(
-            ConnectionFactory connectionFactory) {
-        SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
-        factory.setConnectionFactory(connectionFactory);
-        factory.setMessageConverter(messageConverter());
-        return factory;
-    }
 }
