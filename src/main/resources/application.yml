@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: wordcloud-worker
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: wordcloud
+    password: wordcloud
+
+wordcloud:
+  rabbitmq:
+    queue: wordcloud.text.queue
